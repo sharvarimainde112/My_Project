@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeciallyUs | Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-navbar">
+        Already have an account? <a href="../login_page/index.html">Log in</a>
+    </div>
+
+    <div class="main-layout">
+        <section class="branding-side">
+            <img src="logo-sticker.png" alt="SpeciallyUs" class="main-hero-logo">
+            
+            <div class="hero-text">
+                <h1>Join a supportive community for special children</h1>
+                <p>Parents, caregivers, and therapists—together in one safe space.</p>
+            </div>
+
+            <img src="pic1.png" alt="Family Illustration" class="family-visual">
+
+            <div class="trust-list">
+                <div class="trust-item"><span>✔</span> Verified Therapists</div>
+                <div class="trust-item"><span>🔒</span> Private & Secure</div>
+                <div class="trust-item"><span>🧡</span> Community First</div>
+            </div>
+        </section>
+
+        <section class="form-side">
+            <div class="signup-card">
+                <h2>Create Your Profile</h2>
+                <p class="subtitle">Help us personalize your experience</p>
+
+                <form id="signupForm">
+                    <label class="section-label">I am a:</label>
+                    <div class="role-row">
+                        <label class="custom-radio">
+                            <input type="radio" name="role" checked> Parent / Caregiver
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="role"> Therapist / Professional
+                        </label>
+                    </div>
+
+                    <div class="field-grid">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="text" placeholder="City / Location">
+                        <input type="text" placeholder="Phone ">
+                    </div>
+
+                    <label class="section-label">About Your Child</label>
+                    <div class="field-grid">
+                        <select required>
+                            <option value="" disabled selected>Child's Age</option>
+                            <option value="0-3">0-3 years</option>
+                            <option value="4-7">4-7 years</option>
+                            <option value="8-12">8-12 years</option>
+                            <option value="13-18">13-18 years</option>
+                            <option value="18+">18+ years</option>
+                        </select>
+                        <select name="gender" required>
+                            <option value="" disabled selected>Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <label class="section-label">Area of Support</label>
+                    <div class="multiselect-container">
+                        <div class="select-box" id="dropTrigger">
+                            <span>Select areas...</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="drop-options" id="dropMenu">
+                            <label class="check-item"><input type="checkbox" value="Autism"> <span>Autism Spectrum Disorder</span></label>
+                            <label class="check-item"><input type="checkbox" value="intellectual"> <span>Intellectual Disability</span></label>
+                            <label class="check-item"><input type="checkbox" value="Speech Delay"> <span>Speech and Language Disorders</span></label>
+                            <label class="check-item"><input type="checkbox" value="Learning"> <span>Learning Disability</span></label>
+                            <label class="check-item"><input type="checkbox" value="Hearing"> <span>Hearing Impairment</span></label>
+                            <label class="check-item"><input type="checkbox" value="Visual"> <span>Visual Impairment</span></label>
+                            <label class="check-item"><input type="checkbox" value="Cerebral Palsy"> <span>Cerebral Palsy</span></label>
+                            <label class="check-item"><input type="checkbox" value="Physical"> <span>Physical/Locomotor Disability</span></label>
+                            <label class="check-item"><input type="checkbox" value="Developmental"> <span>Developmental Delay</span></label>
+                            <label class="check-item"><input type="checkbox" value="Down Sydrome"> <span>Down Syndrome</span></label>
+                            <label class="check-item"><input type="checkbox" value="Behavioral"> <span>Emotional or Behavioral Disorder</span></label>
+                            <label class="check-item"><input type="checkbox" value="ADHD"> <span>Attention Deficit Hyperactivity Disorder(ADHD)</span></label>
+                            <label class="check-item"><input type="checkbox" value="Epilipsy"> <span>Epilipsy</span></label>
+                            <label class="check-item"><input type="checkbox" value="Other"> <span>Other</span></label>
+                        </div>
+                    </div>
+
+                    <div class="selected-elements-box" id="resultDisplay">
+                        No support areas selected.
+                    </div>
+
+                    <button type="submit" class="submit-btn">Continue to Community</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
