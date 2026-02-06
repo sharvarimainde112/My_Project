@@ -1,0 +1,339 @@
+:root {
+    --brand-blue: #6395e9;
+    --dark-text: #2d3748;
+    --light-bg: #f8fafc;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: url('background-image.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--dark-text);
+}
+
+/* 1. ATTRACIVE UPGRADE: Glassmorphism Nav */
+.top-navbar {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    font-size: 14px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.top-navbar a {
+    color: var(--brand-blue);
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.main-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    align-items: center;
+    padding: 0 10px;
+    gap: 40px;
+}
+
+/* 2. BRANDING SIDE UPGRADES */
+.branding-side {
+    flex: 1;
+}
+
+.main-hero-logo {
+    width: 400px; /* */
+    height: auto;
+    margin-bottom: 15px;
+    margin-top: 3px;
+    /* High-end sticker die-cut effect */
+    filter: 
+        drop-shadow(2px 2px 0 white) 
+        drop-shadow(-2px -2px 0 white) 
+        drop-shadow(2px -2px 0 white) 
+        drop-shadow(-2px 2px 0 white)
+        drop-shadow(0 10px 20px rgba(99, 149, 233, 0.3));
+    /* Floating animation for a premium feel */
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-text h1 {
+
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    margin-top:3px;
+    background: linear-gradient(to right, #2d3748, #6395e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    color: #4a5568;
+    margin-bottom: 40px;
+    font-size: 18px;
+    margin-top:5px;
+}
+
+.family-visual {
+    width: 100%;
+    max-width: 450px; /* */
+    margin-bottom: 30px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+}
+
+.trust-item {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size:large;
+    margin-top:5px;
+}
+
+/* 3. FORM CARD (RESTORED TO PREVIOUS STYLING) */
+.form-side {
+    flex: 1.2;
+}
+.signup-card {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.signup-card h2 { margin: 0; font-size: 26px;color: var(--brand-blue);}
+.subtitle { color: #888; font-size: 14px; margin-bottom: 30px; }
+
+
+.section-label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 20px 0 10px;
+}
+
+.role-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input, select, .select-box {
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: var(--light-bg);
+    width: 100%;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: #6fa8ff;
+    box-shadow: 0 0 0 2px rgba(111, 168, 255, 0.15);
+    outline: none;
+}
+
+input,
+select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Dropdown styling (Preserved as requested) */
+.multiselect-container { position: relative; }
+
+.drop-options {
+    position: absolute;
+    top: calc(100% + 5px); 
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: none;
+    z-index: 150;
+    padding: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.drop-options label { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    padding: 10px 15px; 
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    font-size: 15px;
+    color: var(--dark-text);
+}
+
+.drop-options label:hover {
+    background: #f1f5f9;
+}
+
+.drop-options input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0; 
+    cursor: pointer;
+    accent-color: var(--brand-blue);
+}
+
+.selected-elements-box {
+    margin-top: 15px;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    font-size: 14px;
+    color: var(--brand-blue);
+    font-weight: bold;
+    min-height: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--brand-blue);
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.submit-btn:hover {
+    filter: brightness(1.1);
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    background-attachment: scroll;
+  }
+
+  .main-layout {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* NAVBAR */
+  .top-navbar {
+    position: static;
+    margin-bottom: 15px;
+    align-self: flex-end;
+    font-size: 13px;
+  }
+
+  /* BRANDING SIDE */
+  .branding-side {
+    text-align: center;
+  }
+
+  .main-hero-logo {
+    width: 260px;
+    animation: none; /* Reduce motion for comfort */
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .family-visual {
+    max-width: 280px;
+    margin: 0 auto 20px;
+  }
+
+  .trust-item {
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  /* FORM CARD */
+  .form-side {
+    width: 100%;
+  }
+
+  .signup-card {
+    padding: 30px 22px;
+    border-radius: 24px;
+  }
+
+  .signup-card h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  /* FORM LAYOUT */
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .role-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  input,
+  select,
+  .select-box {
+    font-size: 15px;
+    padding: 16px;
+  }
+
+  /* MULTISELECT */
+  .drop-options {
+    max-height: 260px;
+    overflow-y: auto;
+  }
+
+  .selected-elements-box {
+    font-size: 14px;
+  }
+
+  /* CTA BUTTON */
+  .submit-btn {
+    font-size: 16px;
+    padding: 16px;
+  }
+}
